@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans&display=swap');
+
+/* General styling */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--josefin);
+}
+
+/* navbar */
+
+.navbar{
+    width: 100vw;
+    height: 50px;
+    padding: 10px 0;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ochre);
+    position: sticky;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navbar ul li{
+    padding: 0 10px 0 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo .name{
+    
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo h1{
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logo h1 a{
+    text-decoration: none;
+    color: var(--black);
+    
+}
+
+.initials{
+    position: relative;
+    z-index: 0;
+    width: 55px;
+    height: 50px;
+    padding-top: 7px;
+    font-size: 35px;
+    text-align: right;
+    font-weight: 800;
+}
+
+/* section1 */
+
+
+.container__section1{
+    height: 80vh;
+    width: 100vw;
+    background-color: var(--ochre);
+}
+
+.heading__section1{
+    display: flex;
+    width: 50vw;
+    position: relative;
+    
+}
+
+.heading-border__section1
+{
+    height: 20px;
+    z-index: 0;
+    width: 80%;
+    margin: 0 auto;
+    background-color: yellow;
+    position: absolute;
+    bottom: 12px;
+}
+
+.heading__section1 h2{
+    font-size: 45px;
+   
+}

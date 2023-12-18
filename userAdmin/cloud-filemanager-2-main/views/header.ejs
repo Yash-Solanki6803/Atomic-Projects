@@ -1,0 +1,65 @@
+<header
+  id="header"
+  class="transparent-header dark full-header"
+  data-sticky-class="not-dark"
+  data-responsive-class="not-dark"
+  data-sticky-offset="full"
+  style="background-color: black"
+>
+  <div id="header-wrap">
+    <div class="container clearfix">
+      <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+      <div id="logo">
+        <!-- <a
+                href="https://themes.semicolonweb.com/html/canvas/v5/index.html"
+                class="standard-logo"
+                data-dark-logo="https://themes.semicolonweb.com/html/canvas/v5/demos/business/images/logo-dark.png"
+                ><img
+                  src="https://themes.semicolonweb.com/html/canvas/v5/demos/business/images/logo.png"
+                  alt="Canvas Logo"
+              /></a> -->
+        <!-- <a
+                href="https://themes.semicolonweb.com/html/canvas/v5/index.html"
+                class="retina-logo"
+                data-dark-logo="demos/business/images/logo-dark@2x.png"
+                ><img
+                  src="https://themes.semicolonweb.com/html/canvas/v5/demos/business/images/logo@2x.png"
+                  alt="Canvas Logo"
+              /></a> -->
+        LOGO
+      </div>
+
+      <nav id="primary-menu" class="not-dark">
+        <ul>
+          <li>
+            <a href="/"><div>Home</div></a>
+          </li>
+          <li>
+            <a href="/files"><div>Files</div></a>
+          </li>
+          <li>
+            <a href="#"><div>About Us</div></a>
+          </li>
+          <li>
+            <a href="/contact"><div>Contact</div></a>
+          </li>
+          <% if(user){ %>
+          <li>
+            <a href="/api/logout"><div>Logout</div></a>
+          </li>
+          <% }else {%>
+            <li>
+              <a href="/login"><div>Login</div></a>
+            </li>
+            <% } %>
+            <% if(user && user.role!= "user") {%>
+          <li>
+            <a href="/dashboard"><div>Dashboard</div></a>
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

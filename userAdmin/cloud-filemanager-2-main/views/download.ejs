@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,600,700|Open+Sans:300,400,600,700,800,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/css/bootstrap.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/style.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/css/dark.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/css/swiper.css"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/demos/business/business.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/demos/business/css/fonts.css"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/css/font-icons.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/css/animate.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/css/magnific-popup.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/one-page/css/et-line.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/css/responsive.css"
+      type="text/css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://themes.semicolonweb.com/html/canvas/v5/demos/business/css/colors.css"
+      type="text/css"
+    />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/timeline.css">
+    <style>
+      .fbox-icon>a>i{
+        color:black !important;
+      }
+      .navigation{
+        cursor: pointer;
+        color: black;
+        padding: 8px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 300ms;
+        font-size: 18px;
+      }
+      .navigation:hover{
+        background-color: #79E0EE;
+        
+        border-radius: 50%;
+      }
+      .col-md-3{
+        margin: 2%  0;
+        transition: 0.4s;
+      }
+
+      .col-md-3:hover{
+        transform: scale(1.1);
+      }
+    </style>
+    <title>File Manager</title>
+    
+  </head>
+  <body class="stretched">
+  <!-- <section> -->
+    <div id="wrapper" class="clearfix">
+        <%- include('header'); -%>
+
+        <div class="row" style="margin: 0% !important; margin-top: 4% !important;">
+            
+            <% files.map(file=>{ %>
+               <style>
+                .link{
+                  opacity: 0;
+                  transition: 0.3s;
+                }
+                .card:hover {
+                  background-image: none !important;
+                  background-color: white;
+                }
+                .card:hover .link{
+                  opacity: 1;
+                }
+                
+               </style>
+
+                <div class="col-md-3">
+                    <div class="card" style="background-image: url('/files/thumbnail/<%=file.img%>'); background-size: cover;">
+                        <a class="link" style="color: black;" href="/api/download/<%= file._id %>">
+                    <div class="card-header" style="font-weight: 600; font-size: 24px; text-transform: capitalize;"><%= file.name %></div>
+                    <div class="card-body">
+                    <p class="card-text"><%= file.desc %></p>
+                    
+                </div>
+                <div class="card-footer"><%= file.dateCreated.toLocaleDateString('en-us', { year:"numeric", month:"short", day:"numeric"}) %></div>
+                    </a>
+            </div>
+                    </div>
+
+                <% }) %>
+            
+           
+             <!-- <div class="col-md-3">
+            <div class="card">
+            <div class="card-header">Card Heading without title</div>
+            <div class="card-body">
+            <p class="card-text">Description</p>
+            
+        </div>
+        <div class="card-footer">Card footer</div>
+            </div>
+            </div>
+             <div class="col-md-3">
+            <div class="card">
+            <div class="card-header">Card Heading without title</div>
+            <div class="card-body">
+            <p class="card-text">Description</p>
+            
+        </div>
+        <div class="card-footer">Card footer</div>
+            </div>
+            </div>
+             <div class="col-md-3">
+            <div class="card">
+            <div class="card-header">Card Heading without title</div>
+            <div class="card-body">
+            <p class="card-text">Description</p>
+            
+        </div>
+        <div class="card-footer">Card footer</div>
+            </div>
+            </div>
+             <div class="col-md-3">
+            <div class="card">
+            <div class="card-header">Card Heading without title</div>
+            <div class="card-body">
+            <p class="card-text">Description</p>
+            
+        </div>
+        <div class="card-footer">Card footer</div>
+            </div>
+            </div> -->
+            
+            </div>
+      <%- include('footer'); -%>
+
+    </div>
+
+    <div id="gotoTop" class="icon-angle-up"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://themes.semicolonweb.com/html/canvas/v5/js/jquery.js"></script>
+    <script src="https://themes.semicolonweb.com/html/canvas/v5/js/plugins.js"></script>
+
+    <script src="https://themes.semicolonweb.com/html/canvas/v5/js/functions.js"></script>
+  <!-- <script>
+
+$('.timeline-content').popover({
+        html: true,
+        trigger: 'manual',
+      
+    }).on("mouseenter", function () {
+        var _this = this;
+        $(this).popover("show");
+        $(this).siblings(".popover").on("mouseleave", function () {
+            $(_this).popover('hide');
+        });
+    }).on("mouseleave", function () {
+        var _this = this;
+        setTimeout(function () {
+            if (!$(".popover:hover").length) {
+                $(_this).popover("hide")
+            }
+        }, 100);
+    });
+
+     
+    </script>
+    -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+      data-cf-beacon='{"rayId":"796ef4a3de6a963e","token":"0627f0b8b73941069bc19139e63db853","version":"2022.11.3","si":100}'
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script>
+      $(document).ready(function() {
+        let prev=0
+      let next = 0
+      let pos= 0
+      $('.prev').click(function () {
+        prev+=1
+        pos-=100
+        // console.log(pos)
+        $(".item").css('transform', 'translate('+ pos +'px, 0)')
+      })
+      $('.next').click(function () {
+        next+=1
+        pos+=50
+        $(".item").css('transform', 'translate('+ pos +'px, 0)')
+      })
+});
+    </script> -->
+   
+  </body>
+</html>

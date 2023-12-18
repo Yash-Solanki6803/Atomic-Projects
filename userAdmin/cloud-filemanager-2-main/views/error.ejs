@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&amp;display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>404 | Songmines</title>
+  </head>
+  <body class="stretched">
+    <div id="wrapper" class="clearfix">
+      <%- include('header'); -%>
+      <section
+        id="slider"
+        class="slider-element min-vh-60 min-vh-md-100 dark error404-wrap include-header"
+        style="background: url(images/landing/static.jpg) center"
+      >
+        <div class="slider-inner">
+          <div class="vertical-middle">
+            <div class="container text-center py-5 py-md-0">
+              <div class="error404"><%= status %></div>
+              <div class="heading-block border-bottom-0">
+                <h4><%= message %></h4>
+                <span>Try the search below to find matching pages:</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%- include('footer'); -%>
+    </div>
+
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <script
+      data-cfasync="false"
+      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.min.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+      data-cf-beacon='{"rayId":"796ed8001b71e33c","token":"0627f0b8b73941069bc19139e63db853","version":"2022.11.3","si":100}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

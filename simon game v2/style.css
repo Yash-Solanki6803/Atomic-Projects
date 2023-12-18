@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: black;
+    position: relative;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn{
+    text-align: center;
+    height: 6rem;
+    width: 12rem;
+    background-color: white;
+    position: absolute;
+    top: 6rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: inset 0 0 50px black;
+    transition: all 0.1s;
+    
+}
+
+h1{
+    font-size: 1rem;
+    color: rgb(64, 63, 63);
+    text-shadow: 2px 2px 8px #4a4949;
+}
+
+
+.panel{
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    cursor: pointer;
+}
+
+.active{
+    box-shadow: inset 0 0 50px rgb(48, 48, 48);
+    transition: 0.1s;
+}
+
+.cover{
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 100%;
+    background-color: black;
+}
+
+
+
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
+  
+
+#red{
+    border-top-right-radius: 100%;
+    background-color: red;
+}
+
+#blue{
+    border-bottom-right-radius: 100%;
+    background-color: blue;
+}
+
+#green{
+    border-top-left-radius: 100%;
+    background-color: green;
+}
+
+#yellow{
+    border-bottom-left-radius: 100%;
+    background-color: yellow;
+}
+
+
+@media (max-width:500px) {
+    .panel{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .cover{
+        height: 8rem;
+        width: 8rem;
+    }
+}

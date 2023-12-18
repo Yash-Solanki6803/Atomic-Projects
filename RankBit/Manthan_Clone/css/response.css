@@ -1,0 +1,164 @@
+@media  (min-width:1200px){
+    #about-section,#register-section,#event-section{
+            min-height: 100vh;
+    }
+    
+    
+}
+@media  (max-width:1200px){
+     
+    /* #hero-section{   
+        background: url("../assets/images/map_2.png");
+        background-repeat: no-repeat;
+        background-position: center -85px;
+        background-size:90% 100%;
+    }    */
+    .hero-img{
+        top:-45px;
+    }
+    #about-section .container .content{
+        padding:25px 0; 
+    }
+        
+    #about-section .container .content p{
+    
+        margin-top:25px;
+        padding: 0 50px;
+    
+    }
+    #register-section .container .content{
+        position: relative;
+        width: 70%;
+    }
+    #event-section .container .content .eventbox-section {
+        grid-template-columns: repeat(3, minmax(250px, 1fr)) ;
+       
+    }footer{
+        height:100%;
+    }
+}
+
+@media  (max-width:950px){
+    #event-section .container .content .eventbox-section {
+        grid-template-columns: repeat(2, minmax(300px, 1fr)) ;
+    }
+    
+    #register-section .container .content{
+        position: relative;
+        width: 80%;
+    } 
+    .schedule{
+        flex-direction: column;
+    }
+    .schedule table{
+        width:100%;
+    }
+}
+@media  (max-width:768px){
+  
+    .main-menu div {
+        width: 90%;
+      
+    }
+    
+    .hero-event{
+        display: none;
+    }
+    #about-section .container .content{
+        position: relative;
+        height:auto;
+        padding:30px 0; 
+    }
+        
+    #about-section .container .content h1{
+        font-size: 36px;
+    }
+    #about-section .container .content p#about_para{
+        font-size: 17px;
+        margin-top:25px;
+        padding: 0 10px 30px;
+        height:100%;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    #register-section .container .content{
+        position: relative;
+        width: 100%;
+    }
+    
+    #register-section .container .content form .changable{
+        flex-direction: column;
+        width:100%;
+    } 
+    #register-section .container .content form .changable div{
+        margin:10px 0;
+        width:100%;
+    } 
+    #event-section .container .content .eventbox-section {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
+        width:300px;
+    }
+    .event-content{
+        padding:50px 0px;
+    }
+    .eventBox.active .event-content{
+        right: 5%; 
+       
+    }
+    .event-content h2{
+        font-size: 25px;
+        padding:0;
+        display: block;
+    }
+    
+    .guideline-heading h1{
+        font-size: 36px;
+    }
+    .guideline-body table{
+        width:100%;
+        background: #262626;
+        border-radius: 6px;
+        border:none;
+        border-collapse: collapse;
+        margin-top:10px;
+        
+    }
+    
+}
+
+@media  (max-width:480px){
+    
+    .main-menu div {
+        width: 80%;
+      
+    }
+    #about-section .container .content{
+      padding:30px 0; 
+    }
+        
+    #about-section .container .content h1{
+        font-size: 36px;
+    }
+    #about-section .container .content #about_para p{
+        font-size: 16px;
+        margin-top:25px;
+        padding: 0 0px 30px;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    #register-section .container .content form{
+        padding:20px 0;
+    }
+    #register-section .container .content{
+        position: relative;
+        width: 100%;
+        padding:0;
+    }
+    
+    .event-content p{
+        padding:0;
+    }
+    .event-content h2{
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,68 @@
+<%- include("partials/header"); -%>
+
+    <section class="banner">
+        <div class="banner-main-content">
+            <h2>I AM A FREELANCE DEVELOPER</h2>
+            <H3>Hire me for building your personalised website</H3>
+
+            <button>
+                <a href="/contact">Click here</a>
+            </button>
+
+            <!-- USE A FOR LOOP HERE TO LOAD ALL THE CURRENT TECH NEWS -->
+
+            <div class="current-news-head">
+
+                <%for(var i =currentNews.length-1 ; i>= currentNews.length-5 ; i--){%>
+                    <h3><%=currentNews[i].currentNewsBody%> <span>BY <%=currentNews[i].currentNewsSource%></span></h3>
+                <%}%>
+
+                
+            </div>
+
+        </div>
+
+        <div class="banner-sub-content">
+            <div class="hot-topic">
+                <!-- <img src="/images/2.jpg" alt=""> -->
+                <div class="hot-topic-content">
+                
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, maiores?</h2>
+                    <h3>New Topic 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sint explicabo! Maiores corrupti hic blanditiis vero, vitae fuga iure asperiores?</p>
+                    <a href="/newletter">Read more</a>
+                </div>
+            </div>
+            <div class="hot-topic">
+                <!-- <img src="/images/2.jpg" alt=""> -->
+                <div class="hot-topic-content">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, maiores?</h2>
+                    <h3>New Topic 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sint explicabo! Maiores corrupti hic blanditiis vero, vitae fuga iure asperiores?</p>
+                    <a href="/newletter">Read more</a>
+                </div>
+            </div>
+            <div class="hot-topic">
+                <!-- <img src="/images/2.jpg" alt=""> -->
+                <div class="hot-topic-content">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, maiores?</h2>
+                    <h3>New Topic 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sint explicabo! Maiores corrupti hic blanditiis vero, vitae fuga iure asperiores?</p>
+                    <a href="/newletter">Read more</a>
+                </div>
+            </div>
+            <div class="hot-topic">
+                <!-- <img src="/images/2.jpg" alt=""> -->
+                <div class="hot-topic-content">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, maiores?</h2>
+                    <h3>New Topic 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sint explicabo! Maiores corrupti hic blanditiis vero, vitae fuga iure asperiores?</p>
+                    <a href="/newletter">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/home.js"></script>
+</body>
+</html>

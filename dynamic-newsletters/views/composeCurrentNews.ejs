@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+
+
+
+<div class="data">
+
+    <h1 class="data">Current News Head</h1>
+
+<form action="/composeCurrentNews" method="post">
+    <label >News Source</label>
+    <input class="data dataBody" type="text" name="currentNewsSource">
+    <label >Current News</label>
+    <textarea class="data dataBody"  id="" cols="30" rows="10" maxlength="75" name="currentNewsBody" id="currentNewsBody"></textarea>
+    <button class="data" type="submit" name="button">Publish</button>
+</form>
+
+<div class="deleteSection">
+    <%for(var i =currentNews.length-1 ; i>=0 ; i--){%>
+        <form action="/deleteCurrentNews" method="post">
+            <h3><%=currentNews[i].currentNewsBody%> <span>BY <%=currentNews[i].currentNewsSource%></span><button class="deleteButton" value="<%=i%>" >Delete</button></h3>
+        </form>
+        <h3><%=currentNews[i].currentNewsBody%> <span>BY <%=currentNews[i].currentNewsSource%></span><button type="submit" class="deleteButton" value="<%=i%>" >Delete</button></h3>
+        
+    <%}%>
+</div>
+
+</div>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,103 @@
+.timeline {
+  display: flex;
+  padding: 8% 7% 4%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.timeline .next {
+  margin-left: 40px;
+}
+.timeline .prev {
+  margin-right: 40px;
+}
+.timeline .timeline-slider {
+  display: flex;
+  padding: 3% 7%;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  width: 80%;
+  overflow: hidden;
+}
+.timeline .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.timeline .node {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  border: 0.1px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px !important;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+.timeline .node:hover {
+  transform: scale(10);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.timeline .node:hover i {
+  transform: scale(0.2);
+  opacity: 0;
+  font-size: 1.5rem;
+}
+.timeline .node:hover .date {
+  opacity: 0;
+}
+.timeline .node:hover *.description {
+  opacity: 1;
+}
+.timeline .node .date {
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-35%, 120%);
+  width: 90px;
+  font-weight: 600;
+  left: 50%;
+  transition: 500ms;
+}
+.timeline .node i {
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.timeline .line {
+  width: 80px !important;
+  height: 3px;
+  background-color: black;
+}
+.item:last-child .line {
+  width: 1000vw !important;
+}
+
+.node:hover .description {
+  opacity: 1;
+}
+
+.description {
+  padding: 1% 7% 2%;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: cadetblue;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  transition: 0.3s;
+  opacity: 0;
+}
+.description h1 {
+  margin: 8px;
+  font-size: 28px;
+}/*# sourceMappingURL=timeline.css.map */
